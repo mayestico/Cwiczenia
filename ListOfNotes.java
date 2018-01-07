@@ -6,14 +6,14 @@ public class ListOfNotes {
     String computerName;
     String teaType;
 
-    int sumOfThings (int books, int nrOfElectronics, int nrOfComputers) {
+    int sumOfThings (int books, int nrOfElectronics, int nrOfComputers) { // tworzymy metode sumOfThings i dorzucamy do niej inty
         int result = books+nrOfElectronics+nrOfComputers;
         System.out.println("Total sum of electronics things = "+result);
-        return result;
+        return result; // metoda zwraca wartosc wiec konczymy ja return; (gdyby nie zwracała void)
     }
 
 
-    void printInfo(int nrOfElectronics, int nrOfComputers, String computerName) {
+    void printInfo(int nrOfElectronics, int nrOfComputers, String computerName) { // metoda nie zwraca wartosci wiec nie uzywamy return
         System.out.println("You have nr of Electronic Gadgets" + nrOfElectronics + " and nr of Computers" + nrOfComputers +
                 "Brand " + computerName);
     }
@@ -32,8 +32,8 @@ public class ListOfNotes {
 
 class EngineOfList {
     public static void main(String[] args) {
-        ListOfNotes Rafal = new ListOfNotes();
-        Rafal.ListOfBooks(1, "Lemon");
+        ListOfNotes Rafal = new ListOfNotes(); // tworzymy obiekt
+        Rafal.ListOfBooks(1, "Lemon"); // przekazujemy zmiennej skladowej ListOfBooks wartosci
         Rafal.ListOfBooks(2, "Black");
         Rafal.SpecifiedTypeOfBook("Rio Anaconda", "Red Tea");
         Rafal.printInfo(10, 1, "Asus");
